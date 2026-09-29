@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>humanintelligence.today — The Supreme Force Behind Innovation</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Canvas Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        cyber: {
+                            bg: '#080a0f',
+                            card: '#0f1420',
+                            border: '#1e293b',
+                            pink: '#ff2a85',
+                            cyan: '#00f0ff',
+                            amber: '#ffb703',
+                            purple: '#9d4edd',
+                        }
+                    },
+                    boxShadow: {
+                        'glow-pink': '0 0 25px -5px rgba(255, 42, 133, 0.4)',
+                        'glow-cyan': '0 0 25px -5px rgba(0, 240, 255, 0.4)',
+                        'glow-amber': '0 0 25px -5px rgba(255, 183, 3, 0.4)',
+                        'glow-purple': '0 0 25px -5px rgba(157, 78, 221, 0.4)',
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #080a0f;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #334155;
+        }
+
+        /* Glassmorphism gradient borders */
+        .glass-panel {
+            background: rgba(15, 20, 32, 0.75);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .glass-panel-glow {
+            background: rgba(15, 20, 32, 0.85);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 240, 255, 0.2);
+        }
+
+        .text-gradient-pink-cyan {
+            background: linear-gradient(135deg, #ff2a85 0%, #a855f7 50%, #00f0ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .text-gradient-gold {
+            background: linear-gradient(135deg, #ffe600 0%, #ffb703 50%, #ff7b00 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .bg-grid-pattern {
+            background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+    </style>
+</head>
+
+<body class="bg-cyber-bg text-slate-100 font-sans selection:bg-cyber-pink selection:text-white overflow-x-hidden relative">
+
+    <!-- Grid Overlay Background -->
+    <div class="fixed inset-0 bg-grid-pattern pointer-events-none z-0 opacity-60"></div>
+    
+    <!-- Ambient Neon Glowing Orbs -->
+    <div class="fixed -top-40 -left-40 w-96 h-96 bg-cyber-pink/20 rounded-full blur-[120px] pointer-events-none z-0"></div>
+    <div class="fixed top-1/3 -right-40 w-96 h-96 bg-cyber-cyan/15 rounded-full blur-[130px] pointer-events-none z-0"></div>
+    <div class="fixed bottom-10 left-1/4 w-96 h-96 bg-cyber-purple/20 rounded-full blur-[140px] pointer-events-none z-0"></div>
+
+    <div class="relative z-10 flex flex-col min-h-screen">
+
+        <!-- Header / Navigation -->
+        <header class="sticky top-0 z-50 backdrop-blur-xl bg-cyber-bg/80 border-b border-slate-800/80 transition-all duration-300">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+                <!-- Brand Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="relative flex items-center justify-center w-11 h-11 rounded-xl bg-slate-900 border border-cyber-pink/40 shadow-glow-pink group-hover:scale-105 transition-transform duration-300">
+                        <i data-lucide="brain" class="w-6 h-6 text-cyber-pink animate-pulse-slow"></i>
+                        <span class="absolute -top-1 -right-1 w-3 h-3 bg-cyber-cyan rounded-full animate-ping"></span>
+                        <span class="absolute -top-1 -right-1 w-3 h-3 bg-cyber-cyan rounded-full"></span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-display font-extrabold text-xl tracking-tight text-white group-hover:text-cyber-pink transition-colors">
+                            humanintelligence<span class="text-cyber-cyan">.today</span>
+                        </span>
+                        <span class="text-[10px] tracking-widest uppercase font-mono text-slate-400 -mt-1">Uncomputable Superiority</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+                    <a href="#why-hi" class="hover:text-cyber-cyan transition-colors">Why HI?</a>
+                    <a href="#hi-vs-ai" class="hover:text-cyber-pink transition-colors">HI vs AI</a>
+                    <a href="#pillars" class="hover:text-cyber-amber transition-colors">Pillars</a>
+                    <a href="#proof-quiz" class="hover:text-cyber-cyan transition-colors">Human Proof</a>
+                    <a href="#manifesto" class="hover:text-cyber-pink transition-colors">Manifesto</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="hidden sm:flex items-center gap-4">
+                    <a href="#pledge" class="relative group overflow-hidden rounded-xl p-px font-semibold text-sm">
+                        <span class="absolute inset-0 bg-gradient-to-r from-cyber-pink via-cyber-purple to-cyber-cyan group-hover:opacity-100 transition-opacity"></span>
+                        <span class="relative block px-5 py-2.5 rounded-[11px] bg-slate-950 transition-all duration-300 group-hover:bg-transparent text-white flex items-center gap-2">
+                            <span>Join The Movement</span>
+                            <i data-lucide="sparkles" class="w-4 h-4 text-cyber-amber"></i>
+                        </span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-400 hover:text-white focus:outline-none">
+                    <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Nav Menu -->
+            <div id="mobile-menu" class="hidden md:hidden bg-slate-950/95 border-b border-slate-800 px-4 pt-2 pb-6 space-y-4">
+                <a href="#why-hi" class="block text-slate-300 hover:text-cyber-cyan py-2 border-b border-slate-800/50">Why HI?</a>
+                <a href="#hi-vs-ai" class="block text-slate-300 hover:text-cyber-pink py-2 border-b border-slate-800/50">HI vs AI</a>
+                <a href="#pillars" class="block text-slate-300 hover:text-cyber-amber py-2 border-b border-slate-800/50">Pillars</a>
+                <a href="#proof-quiz" class="block text-slate-300 hover:text-cyber-cyan py-2 border-b border-slate-800/50">Human Proof</a>
+                <a href="#manifesto" class="block text-slate-300 hover:text-cyber-pink py-2">Manifesto</a>
+                <a href="#pledge" class="block text-center py-3 rounded-xl bg-gradient-to-r from-cyber-pink to-cyber-cyan text-white font-bold">Join The Movement</a>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section id="why-hi" class="relative pt-12 pb-24 lg:pt-24 lg:pb-32 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Hero Content Left -->
+                    <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
+                        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-panel border-cyber-pink/30 text-cyber-pink text-xs font-mono tracking-wide uppercase shadow-glow-pink">
+                            <span class="w-2 h-2 rounded-full bg-cyber-pink animate-ping"></span>
+                            <span>The Supreme Force of Consciousness</span>
+                        </div>
+
+                        <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.1]">
+                            The Spark Behind Every Great Innovation Is <span class="text-gradient-pink-cyan">Still Human.</span>
+                        </h1>
+
+                        <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed">
+                            Artificial Intelligence calculates patterns. <strong class="text-white font-semibold">Human Intelligence (HI)</strong> comprehends context, feels empathy, births genuine art, and challenges the status quo. Explore why consciousness remains peerless.
+                        </p>
+
+                        <!-- CTA Actions -->
+                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                            <a href="#manifesto" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-cyber-pink to-cyber-purple text-white font-bold text-base shadow-glow-pink hover:opacity-90 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-3">
+                                <i data-lucide="book-open" class="w-5 h-5"></i>
+                                <span>Read the Manifesto</span>
+                            </a>
+                            <a href="#pledge" class="w-full sm:w-auto px-8 py-4 rounded-xl glass-panel hover:bg-slate-800/80 text-white font-semibold text-base border border-slate-700 hover:border-cyber-cyan transition-all flex items-center justify-center gap-3">
+                                <i data-lucide="shield-check" class="w-5 h-5 text-cyber-cyan"></i>
+                                <span>Pledge for HI</span>
+                            </a>
+                        </div>
+
+                        <!-- Live Counter Strip -->
+                        <div class="pt-8 border-t border-slate-800/80 grid grid-cols-3 gap-4 text-center lg:text-left">
+                            <div>
+                                <p class="text-2xl sm:text-3xl font-display font-black text-cyber-cyan">100%</p>
+                                <p class="text-xs text-slate-400 uppercase tracking-wider font-mono mt-1">Authentic Empathy</p>
+                            </div>
+                            <div>
+                                <p class="text-2xl sm:text-3xl font-display font-black text-cyber-pink">∞</p>
+                                <p class="text-xs text-slate-400 uppercase tracking-wider font-mono mt-1">True Creativity</p>
+                            </div>
+                            <div>
+                                <p class="text-2xl sm:text-3xl font-display font-black text-cyber-amber">Peerless</p>
+                                <p class="text-xs text-slate-400 uppercase tracking-wider font-mono mt-1">Moral Intuition</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hero Graphic / Dynamic Visual Right -->
+                    <div class="lg:col-span-5 flex justify-center">
+                        <div class="relative w-full max-w-md aspect-square">
+                            <!-- Rotating outer neon ring -->
+                            <div class="absolute inset-0 rounded-full border border-dashed border-cyber-cyan/30 animate-[spin_20s_linear_infinite]"></div>
+                            <div class="absolute inset-4 rounded-full border border-cyber-pink/20 animate-[spin_15s_linear_infinite_reverse]"></div>
+                            
+                            <!-- Glowing Central Orb -->
+                            <div class="absolute inset-8 rounded-full glass-panel-glow flex flex-col items-center justify-center p-8 text-center shadow-glow-cyan animate-float">
+                                <div class="w-20 h-20 rounded-2xl bg-gradient-to-tr from-cyber-pink via-cyber-purple to-cyber-cyan p-0.5 mb-4 shadow-glow-pink">
+                                    <div class="w-full h-full bg-slate-950 rounded-[14px] flex items-center justify-center">
+                                        <i data-lucide="zap" class="w-10 h-10 text-cyber-amber animate-pulse"></i>
+                                    </div>
+                                </div>
+                                <h3 class="font-display font-bold text-2xl text-white">The Human Spark</h3>
+                                <p class="text-xs text-slate-300 mt-2">Uncomputable • Conscious • Intuitive • Empathetic</p>
+
+                                <div class="mt-6 w-full space-y-2">
+                                    <div class="flex justify-between text-xs font-mono text-slate-400">
+                                        <span>Pattern Rec (AI)</span>
+                                        <span>vs</span>
+                                        <span class="text-cyber-cyan font-bold">Lived Experience (HI)</span>
+                                    </div>
+                                    <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden p-0.5">
+                                        <div class="h-full bg-gradient-to-r from-slate-600 via-cyber-purple to-cyber-cyan rounded-full w-[88%]"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Interactive HI vs AI Comparison ("The Spectrum of Intelligence") -->
+        <section id="hi-vs-ai" class="py-20 relative bg-slate-950/60 border-y border-slate-800/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                    <h2 class="text-xs font-mono uppercase tracking-widest text-cyber-cyan">Cognitive Matrix</h2>
+                    <h3 class="font-display text-3xl sm:text-5xl font-extrabold text-white">The Spectrum of Intelligence</h3>
+                    <p class="text-slate-400 text-base sm:text-lg">Compare structural capabilities: Where algorithms hit a hard mathematical ceiling, human consciousness flourishes without limits.</p>
+                </div>
+
+                <!-- Interactive Comparison Dashboard -->
+                <div class="grid lg:grid-cols-12 gap-8 items-start">
+                    
+                    <!-- Dimension Selectors (Tabs) -->
+                    <div class="lg:col-span-5 space-y-3" id="comparison-tabs">
+                        <!-- Tab Buttons will be dynamically populated/interactive via JS -->
+                        <button onclick="switchDimension('intuition')" id="tab-intuition" class="dimension-btn w-full text-left p-5 rounded-xl glass-panel hover:border-cyber-pink transition-all flex items-center justify-between group active-tab border-cyber-pink shadow-glow-pink">
+                            <div class="flex items-center gap-4">
+                                <div class="p-3 rounded-lg bg-cyber-pink/10 text-cyber-pink group-hover:scale-110 transition-transform">
+                                    <i data-lucide="compass" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-display font-bold text-white text-lg">Intuition & Gut Feeling</h4>
+                                    <p class="text-xs text-slate-400">Non-linear rapid cognitive leaps</p>
+                                </div>
+                            </div>
+                            <i data-lucide="chevron-right" class="w-5 h-5 text-slate-500 group-hover:text-cyber-pink"></i>
+                        </button>
+
+                        <button onclick="switchDimension('empathy')" id="tab-empathy" class="dimension-btn w-full text-left p-5 rounded-xl glass-panel hover:border-cyber-cyan transition-all flex items-center justify-between group">
+                            <div class="flex items-center gap-4">
+                                <div class="p-3 rounded-lg bg-cyber-cyan/10 text-cyber-cyan group-hover:scale-110 transition-transform">
+                                    <i data-lucide="heart-handshake" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-display font-bold text-white text-lg">Genuine Empathy & Resonance</h4>
+                                    <p class="text-xs text-slate-400">Shared emotional vulnerability</p>
+                                </div>
+                            </div>
+                            <i data-lucide="chevron-right" class="w-5 h-5 text-slate-500 group-hover:text-cyber-cyan"></i>
+                        </button>
+
+                        <button onclick="switchDimension('creativity')" id="tab-creativity" class="dimension-btn w-full text-left p-5 rounded-xl glass-panel hover:border-cyber-amber transition-all flex items-center justify-between group">
+                            <div class="flex items-center gap-4">
+                                <div class="p-3 rounded-lg bg-cyber-amber/10 text-cyber-amber group-hover:scale-110 transition-transform">
+                                    <i data-lucide="palette" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-display font-bold text-white text-lg">Out-Of-The-Box Creativity</h4>
+                                    <p class="text-xs text-slate-400">Paradigm shifts & original expression</p>
+                                </div>
+                            </div>
+                            <i data-lucide="chevron-right" class="w-5 h-5 text-slate-500 group-hover:text-cyber-amber"></i>
+                        </button>
+
+                        <button onclick="switchDimension('ethics')" id="tab-ethics" class="dimension-btn w-full text-left p-5 rounded-xl glass-panel hover:border-cyber-purple transition-all flex items-center justify-between group">
+                            <div class="flex items-center gap-4">
+                                <div class="p-3 rounded-lg bg-cyber-purple/10 text-cyber-purple group-hover:scale-110 transition-transform">
+                                    <i data-lucide="scale" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-display font-bold text-white text-lg">Moral Agency & Ethics</h4>
+                                    <p class="text-xs text-slate-400">Accountability, remorse & principle</p>
+                                </div>
+                            </div>
+                            <i data-lucide="chevron-right" class="w-5 h-5 text-slate-500 group-hover:text-cyber-purple"></i>
+                        </button>
+
+                        <button onclick="switchDimension('adaptability')" id="tab-adaptability" class="dimension-btn w-full text-left p-5 rounded-xl glass-panel hover:border-emerald-400 transition-all flex items-center justify-between group">
+                            <div class="flex items-center gap-4">
+                                <div class="p-3 rounded-lg bg-emerald-500/10 text-emerald-400 group-hover:scale-110 transition-transform">
+                                    <i data-lucide="sparkles" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-display font-bold text-white text-lg">Contextual Adaptability</h4>
+                                    <p class="text-xs text-slate-400">Zero-shot real world navigation</p>
+                                </div>
+                            </div>
+                            <i data-lucide="chevron-right" class="w-5 h-5 text-slate-500 group-hover:text-emerald-400"></i>
+                        </button>
+                    </div>
+
+                    <!-- Comparison Detail Cards Display -->
+                    <div class="lg:col-span-7 glass-panel p-8 rounded-2xl relative overflow-hidden min-h-[420px] flex flex-col justify-between" id="dimension-display">
+                        <!-- Dynamic Content Injector -->
+                        <div id="dimension-content" class="space-y-6 transition-all duration-300">
+                            <!-- Injected by JS -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Pillars of Human Superiority (Grid) -->
+        <section id="pillars" class="py-24 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                    <h2 class="text-xs font-mono uppercase tracking-widest text-cyber-pink">Foundational Truths</h2>
+                    <h3 class="font-display text-3xl sm:text-5xl font-extrabold text-white">Pillars of Human Superiority</h3>
+                    <p class="text-slate-400 text-base sm:text-lg">Why human cognition remains the master architecture of existence.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    
+                    <!-- Card 1 -->
+                    <div class="glass-panel p-8 rounded-2xl hover:border-cyber-pink hover:-translate-y-2 transition-all duration-300 group flex flex-col justify-between">
+                        <div class="space-y-4">
+                            <div class="w-14 h-14 rounded-xl bg-cyber-pink/10 border border-cyber-pink/30 flex items-center justify-center text-cyber-pink group-hover:scale-110 transition-transform shadow-glow-pink">
+                                <i data-lucide="eye" class="w-7 h-7"></i>
+                            </div>
+                            <h4 class="font-display text-xl font-bold text-white">Consciousness & Purpose</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                AI lacks subjective experience (*qualia*). Humans create with intention, self-awareness, and personal meaning born from mortal existence.
+                            </p>
+                        </div>
+                        <div class="pt-6 border-t border-slate-800/80 mt-6 text-xs font-mono text-cyber-pink flex items-center gap-2">
+                            <span>Beyond Statistical Mimicry</span>
+                            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="glass-panel p-8 rounded-2xl hover:border-cyber-cyan hover:-translate-y-2 transition-all duration-300 group flex flex-col justify-between">
+                        <div class="space-y-4">
+                            <div class="w-14 h-14 rounded-xl bg-cyber-cyan/10 border border-cyber-cyan/30 flex items-center justify-center text-cyber-cyan group-hover:scale-110 transition-transform shadow-glow-cyan">
+                                <i data-lucide="heart" class="w-7 h-7"></i>
+                            </div>
+                            <h4 class="font-display text-xl font-bold text-white">Emotional Resonance</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                Machines emulate sentiment through tokens. Humans feel love, grief, hope, and compassion directly in bodily consciousness.
+                            </p>
+                        </div>
+                        <div class="pt-6 border-t border-slate-800/80 mt-6 text-xs font-mono text-cyber-cyan flex items-center gap-2">
+                            <span>Shared Biological Reality</span>
+                            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="glass-panel p-8 rounded-2xl hover:border-cyber-amber hover:-translate-y-2 transition-all duration-300 group flex flex-col justify-between">
+                        <div class="space-y-4">
+                            <div class="w-14 h-14 rounded-xl bg-cyber-amber/10 border border-cyber-amber/30 flex items-center justify-center text-cyber-amber group-hover:scale-110 transition-transform shadow-glow-amber">
+                                <i data-lucide="shield" class="w-7 h-7"></i>
+                            </div>
+                            <h4 class="font-display text-xl font-bold text-white">Moral & Ethical Agency</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                Algorithms execute instructions without conscience. True accountability, sacrifice, and moral courage are strictly human traits.
+                            </p>
+                        </div>
+                        <div class="pt-6 border-t border-slate-800/80 mt-6 text-xs font-mono text-cyber-amber flex items-center gap-2">
+                            <span>Ethical Accountability</span>
+                            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="glass-panel p-8 rounded-2xl hover:border-cyber-purple hover:-translate-y-2 transition-all duration-300 group flex flex-col justify-between">
+                        <div class="space-y-4">
+                            <div class="w-14 h-14 rounded-xl bg-cyber-purple/10 border border-cyber-purple/30 flex items-center justify-center text-cyber-purple group-hover:scale-110 transition-transform shadow-glow-purple">
+                                <i data-lucide="flame" class="w-7 h-7"></i>
+                            </div>
+                            <h4 class="font-display text-xl font-bold text-white">Unfiltered Originality</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                AI rearranges past data. Humans break existing paradigms, invent new artistic genres, and pull revolutions out of absolute zero.
+                            </p>
+                        </div>
+                        <div class="pt-6 border-t border-slate-800/80 mt-6 text-xs font-mono text-cyber-purple flex items-center gap-2">
+                            <span>First-Principles Creation</span>
+                            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Interactive "Proof of Spark" Human Nuance Quiz -->
+        <section id="proof-quiz" class="py-20 relative bg-slate-950/80 border-t border-slate-800">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
+                    <span class="px-3 py-1 rounded-full bg-cyber-cyan/10 text-cyber-cyan text-xs font-mono border border-cyber-cyan/30">Interactive Nuance Test</span>
+                    <h3 class="font-display text-3xl sm:text-4xl font-extrabold text-white">Test Your Human Nuance</h3>
+                    <p class="text-slate-400 text-sm sm:text-base">Can you spot the subtle paradoxes and emotional depth that algorithms constantly misinterpret?</p>
+                </div>
+
+                <div class="glass-panel p-8 sm:p-10 rounded-2xl border-cyber-cyan/30 shadow-glow-cyan" id="quiz-container">
+                    
+                    <div id="quiz-screen">
+                        <div class="flex items-center justify-between text-xs font-mono text-slate-400 mb-6">
+                            <span>QUESTION <span id="quiz-step-num">1</span> OF 3</span>
+                            <span id="quiz-category" class="text-cyber-cyan font-bold">Paradox Resolution</span>
+                        </div>
+
+                        <h4 id="quiz-question" class="font-display text-xl sm:text-2xl font-bold text-white mb-6">
+                            <!-- Question text injected here -->
+                        </h4>
+
+                        <div id="quiz-options" class="space-y-3">
+                            <!-- Options injected here -->
+                        </div>
+
+                        <div id="quiz-feedback" class="mt-6 p-4 rounded-xl hidden text-sm">
+                            <!-- Feedback text -->
+                        </div>
+
+                        <div class="mt-8 flex justify-end">
+                            <button id="quiz-next-btn" onclick="nextQuestion()" disabled class="px-6 py-3 rounded-xl bg-slate-800 text-slate-500 font-semibold text-sm cursor-not-allowed transition-all">
+                                Next Nuance Test <i data-lucide="arrow-right" class="inline w-4 h-4 ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Quiz Result Screen (Hidden by default) -->
+                    <div id="quiz-result" class="hidden text-center py-8 space-y-6">
+                        <div class="w-20 h-20 mx-auto rounded-full bg-cyber-pink/20 border border-cyber-pink/50 flex items-center justify-center text-cyber-pink shadow-glow-pink">
+                            <i data-lucide="award" class="w-10 h-10"></i>
+                        </div>
+                        <h4 class="font-display text-3xl font-bold text-white">Human Spark Verified!</h4>
+                        <p class="text-slate-300 max-w-lg mx-auto text-base">
+                            You scored <span id="quiz-score" class="text-cyber-pink font-bold">3/3</span> on cognitive nuance. You intuitively recognized subtext, paradox, and genuine emotion—areas where LLMs can only produce probabilistic guesses.
+                        </p>
+                        <button onclick="resetQuiz()" class="px-6 py-3 rounded-xl bg-gradient-to-r from-cyber-pink to-cyber-cyan text-white font-bold text-sm shadow-glow-pink hover:scale-105 transition-transform">
+                            Re-test Nuance
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Manifesto Statement -->
+        <section id="manifesto" class="py-24 relative overflow-hidden">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="glass-panel p-8 sm:p-14 rounded-3xl border-cyber-pink/30 relative">
+                    <div class="absolute -top-10 -right-10 w-40 h-40 bg-cyber-pink/20 rounded-full blur-2xl"></div>
+                    
+                    <div class="space-y-6 relative z-10">
+                        <div class="inline-flex items-center gap-2 text-cyber-amber font-mono text-xs uppercase tracking-widest">
+                            <i data-lucide="scroll" class="w-4 h-4"></i>
+                            <span>Our Founding Manifesto</span>
+                        </div>
+
+                        <h3 class="font-display text-3xl sm:text-5xl font-black text-white leading-tight">
+                            "We do not fear the machine. We elevate the human."
+                        </h3>
+
+                        <div class="space-y-4 text-slate-300 text-base sm:text-lg font-light leading-relaxed">
+                            <p>
+                                In an era obsessed with synthetic automation and algorithmic predictions, we assert an unshakeable truth: <strong>Technology is a tool; Human Consciousness is the miracle.</strong>
+                            </p>
+                            <p>
+                                No neural network will ever feel the existential weight of a decision, the ache of heartbreak, or the euphoria of a breakthrough after years of doubt. Algorithms process artifacts of the past; humans craft the unexpected future.
+                            </p>
+                            <p class="text-white font-medium border-l-4 border-cyber-pink pl-4 italic">
+                                "The goal is not to compete with computational speed, but to double down on everything that makes us irreducibly human: empathy, courage, curiosity, and creative soul."
+                            </p>
+                        </div>
+
+                        <div class="pt-6 flex flex-wrap items-center gap-6 text-sm font-mono text-slate-400">
+                            <div class="flex items-center gap-2">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-cyber-pink"></i>
+                                <span>Protect Critical Thought</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-cyber-cyan"></i>
+                                <span>Celebrate Organic Art</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-cyber-amber"></i>
+                                <span>Prioritize Human Judgement</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7: Pledge & Movement Join Section -->
+        <section id="pledge" class="py-20 relative bg-slate-950/90 border-t border-slate-800">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-12">
+                
+                <div class="max-w-3xl mx-auto space-y-4">
+                    <h2 class="text-xs font-mono uppercase tracking-widest text-cyber-cyan">Stand With Us</h2>
+                    <h3 class="font-display text-3xl sm:text-5xl font-extrabold text-white">Claim Your Spot in the Human First Era</h3>
+                    <p class="text-slate-400 text-base sm:text-lg">
+                        Subscribe for updates on <span class="text-white font-semibold">humanintelligence.today</span> initiative, essays on human cognitive defense, and community events.
+                    </p>
+                </div>
+
+                <!-- Interactive Pledge Card -->
+                <div class="glass-panel p-8 sm:p-12 rounded-3xl border-cyber-purple/40 max-w-2xl mx-auto space-y-8 shadow-glow-purple">
+                    
+                    <!-- Pledge Counter Box -->
+                    <div class="space-y-3">
+                        <p class="text-xs font-mono uppercase tracking-wider text-slate-400">Total Human First Supporters</p>
+                        <div class="flex items-center justify-center gap-2">
+                            <span id="pledge-count" class="font-display text-5xl sm:text-6xl font-black text-gradient-gold">14,289</span>
+                            <span class="text-cyber-amber font-mono text-sm font-bold">+1</span>
+                        </div>
+                        <p class="text-xs text-slate-400">Click below to add your voice & trigger the human spark!</p>
+                    </div>
+
+                    <!-- Pledge Button -->
+                    <button id="pledge-btn" onclick="takePledge()" class="w-full py-5 rounded-2xl bg-gradient-to-r from-cyber-pink via-cyber-purple to-cyber-cyan text-white font-extrabold text-lg shadow-glow-pink hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-3 group">
+                        <i data-lucide="hand" class="w-6 h-6 group-hover:rotate-12 transition-transform"></i>
+                        <span id="pledge-btn-text">I Stand With Human Intelligence</span>
+                    </button>
+
+                    <!-- Waitlist Form -->
+                    <form id="waitlist-form" onsubmit="handleSubscribe(event)" class="space-y-4 pt-4 border-t border-slate-800">
+                        <div class="flex flex-col sm:flex-row gap-3">
+                            <input type="email" id="subscriber-email" required placeholder="Enter your human email address..." class="flex-1 bg-slate-900/90 border border-slate-700 focus:border-cyber-cyan rounded-xl px-4 py-3.5 text-white placeholder-slate-500 text-sm focus:outline-none transition-colors">
+                            <button type="submit" class="px-6 py-3.5 bg-cyber-cyan text-slate-950 font-bold rounded-xl text-sm hover:bg-cyan-300 transition-colors flex items-center justify-center gap-2">
+                                <span>Join Movement</span>
+                                <i data-lucide="send" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                        <p id="subscription-status" class="text-xs text-slate-400 hidden"></p>
+                    </form>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="mt-auto border-t border-slate-800/80 bg-slate-950 py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                    
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-cyber-pink/20 border border-cyber-pink flex items-center justify-center text-cyber-pink">
+                            <i data-lucide="brain" class="w-5 h-5"></i>
+                        </div>
+                        <span class="font-display font-bold text-white text-lg">humanintelligence.today</span>
+                    </div>
+
+                    <p class="text-slate-400 text-sm text-center md:text-left">
+                        Powered by genuine human consciousness. © <span id="current-year">2026</span> All rights reserved.
+                    </p>
+
+                    <div class="flex items-center space-x-6 text-slate-400">
+                        <a href="#" class="hover:text-cyber-pink transition-colors" title="Twitter/X"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+                        <a href="#" class="hover:text-cyber-cyan transition-colors" title="GitHub"><i data-lucide="github" class="w-5 h-5"></i></a>
+                        <a href="#" class="hover:text-cyber-amber transition-colors" title="Substack"><i data-lucide="rss" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        // Set dynamic copyright year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Navigation Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // -------------------------------------------------------------
+        // Dimension Comparison Data Module
+        // -------------------------------------------------------------
+        const dimensionsData = {
+            intuition: {
+                title: "Intuition & Gut Feeling",
+                colorClass: "text-cyber-pink",
+                hiTitle: "Subconscious Synthesis",
+                hiDesc: "Humans process millions of tacit cues instantly, leaping across logic steps to form accurate insights without explicit data training.",
+                aiTitle: "Statistical Probability",
+                aiDesc: "AI only predicts next tokens based on frequency matrices. It cannot feel when something is 'off' without prior pattern matches.",
+                hiScore: 100,
+                aiScore: 15,
+                quote: "The intuitive mind is a sacred gift and the rational mind is a faithful servant."
+            },
+            empathy: {
+                title: "Genuine Empathy & Emotional Depth",
+                colorClass: "text-cyber-cyan",
+                hiTitle: "Lived Vulnerability",
+                hiDesc: "Empathy stems from shared biological mortality, pain, and hope. A human understands suffering because they can suffer.",
+                aiTitle: "Syntactic Emulation",
+                aiDesc: "AI outputs comfort templates ('I am sorry you feel that way'). It experiences zero emotion; it is a mirrorshield of text.",
+                hiScore: 100,
+                aiScore: 0,
+                quote: "Empathy is not algorithmic—it requires a soul capable of feeling."
+            },
+            creativity: {
+                title: "Out-of-the-Box Original Creativity",
+                colorClass: "text-cyber-amber",
+                hiTitle: "Paradigm Creation",
+                hiDesc: "Humans break rules, invent surrealism, revolutionize genres, and create entirely new modes of thought out of silence.",
+                aiTitle: "Combinatorial Interpolation",
+                aiDesc: "AI re-mixes existing training data. It cannot create outside the vector boundary of its training set distribution.",
+                hiScore: 100,
+                aiScore: 35,
+                quote: "You cannot compute genuine artistic soul from averaged internet scrapes."
+            },
+            ethics: {
+                title: "Moral Agency & Ethical Decision Making",
+                colorClass: "text-cyber-purple",
+                hiTitle: "Conscience & Responsibility",
+                hiDesc: "Humans carry moral guilt, moral courage, and honor. We accept consequences for choices that safeguard humanity.",
+                aiTitle: "Constraint Rulesets",
+                aiDesc: "AI follows hardcoded safety filters or reward functions. It has no conscience, moral remorse, or moral duty.",
+                hiScore: 100,
+                aiScore: 10,
+                quote: "True ethical choice requires accountability only a human can bear."
+            },
+            adaptability: {
+                title: "Contextual Adaptability",
+                colorClass: "text-emerald-400",
+                hiTitle: "Zero-Shot Real World Mastery",
+                hiDesc: "A human dropped into an unprecedented global crisis invents novel survival strategies using general common-sense physics and social intuition.",
+                aiTitle: "Brittle Edge-Case Hallucination",
+                aiDesc: "Faced with out-of-distribution environments, algorithms hallucinate or fail completely due to brittle statistical dependencies.",
+                hiScore: 100,
+                aiScore: 40,
+                quote: "Consciousness adapts dynamically; code breaks at the edge case."
+            }
+        };
+
+        function switchDimension(key) {
+            const data = dimensionsData[key];
+            const container = document.getElementById('dimension-content');
+
+            // Update tab styles
+            document.querySelectorAll('.dimension-btn').forEach(btn => {
+                btn.classList.remove('border-cyber-pink', 'border-cyber-cyan', 'border-cyber-amber', 'border-cyber-purple', 'border-emerald-400', 'shadow-glow-pink', 'shadow-glow-cyan', 'active-tab');
+                btn.classList.add('border-transparent');
+            });
+
+            const activeBtn = document.getElementById(`tab-${key}`);
+            activeBtn.classList.add(`border-${data.colorClass.split('-')[1]}`, 'shadow-glow-pink', 'active-tab');
+
+            // Render detail card
+            container.innerHTML = `
+                <div class="space-y-6 animate-fadeIn">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+                        <h3 class="font-display font-extrabold text-2xl text-white flex items-center gap-2">
+                            <span>${data.title}</span>
+                        </h3>
+                        <span class="text-xs font-mono uppercase tracking-wider ${data.colorClass}">Dimension Analysis</span>
+                    </div>
+
+                    <!-- Comparison Bars -->
+                    <div class="space-y-4">
+                        <!-- HI Bar -->
+                        <div class="space-y-1.5">
+                            <div class="flex justify-between text-xs font-bold font-mono">
+                                <span class="text-white flex items-center gap-1.5"><i data-lucide="user" class="w-3.5 h-3.5 text-cyber-pink"></i> Human Intelligence (HI)</span>
+                                <span class="${data.colorClass}">${data.hiScore}% Absolute</span>
+                            </div>
+                            <div class="w-full h-3 bg-slate-900 rounded-full p-0.5 border border-slate-800">
+                                <div class="h-full bg-gradient-to-r from-cyber-pink to-cyber-cyan rounded-full transition-all duration-700" style="width: ${data.hiScore}%"></div>
+                            </div>
+                            <p class="text-slate-300 text-xs sm:text-sm pt-1">${data.hiDesc}</p>
+                        </div>
+
+                        <!-- AI Bar -->
+                        <div class="space-y-1.5 pt-2">
+                            <div class="flex justify-between text-xs font-bold font-mono text-slate-400">
+                                <span class="flex items-center gap-1.5"><i data-lucide="cpu" class="w-3.5 h-3.5 text-slate-500"></i> Artificial Intelligence (AI)</span>
+                                <span>${data.aiScore}% Emulated</span>
+                            </div>
+                            <div class="w-full h-3 bg-slate-900 rounded-full p-0.5 border border-slate-800">
+                                <div class="h-full bg-slate-700 rounded-full transition-all duration-700" style="width: ${data.aiScore}%"></div>
+                            </div>
+                            <p class="text-slate-400 text-xs sm:text-sm pt-1">${data.aiDesc}</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 p-4 rounded-xl bg-slate-900/80 border border-slate-800 text-slate-300 italic text-xs sm:text-sm flex items-start gap-3">
+                        <i data-lucide="quote" class="w-5 h-5 text-cyber-cyan shrink-0 mt-0.5"></i>
+                        <span>"${data.quote}"</span>
+                    </div>
+                </div>
+            `;
+
+            lucide.createIcons();
+        }
+
+        // Initialize default comparison tab
+        switchDimension('intuition');
+
+
+        // -------------------------------------------------------------
+        // Quiz Module: Proof of Spark Nuance Test
+        // -------------------------------------------------------------
+        const quizQuestions = [
+            {
+                category: "Sarcasm & Subtext",
+                question: "A friend says: 'Oh fantastic, another emergency server maintenance on Friday at 5 PM.' How does a human interpret this?",
+                options: [
+                    { text: "They are genuinely excited and happy about the server maintenance.", correct: false },
+                    { text: "They are expressing heavy irony/frustration about ruined weekend plans.", correct: true },
+                    { text: "They are requesting technical data on server downtime protocols.", correct: false }
+                ],
+                explanation: "Humans read emotional context, tone, and irony instantly without computational syntax parsing."
+            },
+            {
+                category: "Artistic Paradox",
+                question: "Why can a painting of a simple black square evoke deep existential tears in a human viewer?",
+                options: [
+                    { text: "Because the viewer's biological visual cortex is experiencing computational RGB pixel error.", correct: false },
+                    { text: "It connects to personal loss, void, stillness, and mortal shared experience.", correct: true },
+                    { text: "Because the paint's reflectiveness index exceeds standard room illumination.", correct: false }
+                ],
+                explanation: "Meaning does not live in the pixels or canvas; it lives in human memory, grief, and soul."
+            },
+            {
+                category: "Moral Dilemma",
+                question: "When a human hero risks their own safety to save a stranger's dog from a river, what drives them?",
+                options: [
+                    { text: "A calculated utility optimization algorithm evaluating energy expenditure vs yield.", correct: false },
+                    { text: "Visceral empathy, moral instinct, and compassion transcending cold logic.", correct: true },
+                    { text: "Hardcoded pre-programmed firmware instructions from ancestors.", correct: false }
+                ],
+                explanation: "Human acts of courage defy pure mathematical utility calculations."
+            }
+        ];
+
+        let currentQuizIndex = 0;
+        let quizScore = 0;
+        let selectedOptionIndex = null;
+
+        function loadQuestion() {
+            const q = quizQuestions[currentQuizIndex];
+            document.getElementById('quiz-step-num').textContent = currentQuizIndex + 1;
+            document.getElementById('quiz-category').textContent = q.category;
+            document.getElementById('quiz-question').textContent = q.question;
+
+            const optionsContainer = document.getElementById('quiz-options');
+            optionsContainer.innerHTML = '';
+
+            selectedOptionIndex = null;
+            const nextBtn = document.getElementById('quiz-next-btn');
+            nextBtn.disabled = true;
+            nextBtn.className = "px-6 py-3 rounded-xl bg-slate-800 text-slate-500 font-semibold text-sm cursor-not-allowed transition-all";
+
+            const feedback = document.getElementById('quiz-feedback');
+            feedback.classList.add('hidden');
+
+            q.options.forEach((opt, idx) => {
+                const btn = document.createElement('button');
+                btn.className = "quiz-opt-btn w-full text-left p-4 rounded-xl border border-slate-800 bg-slate-900/60 hover:bg-slate-800/80 text-slate-200 text-sm transition-all flex items-center justify-between";
+                btn.innerHTML = `
+                    <span>${opt.text}</span>
+                    <span class="w-5 h-5 rounded-full border border-slate-600 flex items-center justify-center text-xs font-mono opt-indicator">${String.fromCharCode(65 + idx)}</span>
+                `;
+                btn.onclick = () => selectQuizOption(idx, opt.correct, btn);
+                optionsContainer.appendChild(btn);
+            });
+        }
+
+        function selectQuizOption(idx, isCorrect, element) {
+            selectedOptionIndex = idx;
+            const allBtns = document.querySelectorAll('.quiz-opt-btn');
+            
+            allBtns.forEach(btn => {
+                btn.classList.remove('border-cyber-pink', 'bg-cyber-pink/10', 'border-emerald-500', 'bg-emerald-500/10');
+            });
+
+            const q = quizQuestions[currentQuizIndex];
+            const feedback = document.getElementById('quiz-feedback');
+            feedback.classList.remove('hidden');
+
+            if (isCorrect) {
+                element.classList.add('border-emerald-500', 'bg-emerald-500/10');
+                feedback.className = "mt-6 p-4 rounded-xl bg-emerald-950/40 border border-emerald-500/40 text-emerald-300 text-sm";
+                feedback.innerHTML = `<strong>Correct!</strong> ${q.explanation}`;
+                quizScore++;
+            } else {
+                element.classList.add('border-cyber-pink', 'bg-cyber-pink/10');
+                feedback.className = "mt-6 p-4 rounded-xl bg-pink-950/40 border border-cyber-pink/40 text-cyber-pink text-sm";
+                feedback.innerHTML = `<strong>Human Nuance Insight:</strong> Algorithms often make this assumption! ${q.explanation}`;
+            }
+
+            // Disable all options after pick
+            allBtns.forEach(b => b.onclick = null);
+
+            // Enable Next Button
+            const nextBtn = document.getElementById('quiz-next-btn');
+            nextBtn.disabled = false;
+            nextBtn.className = "px-6 py-3 rounded-xl bg-gradient-to-r from-cyber-pink to-cyber-cyan text-white font-bold text-sm shadow-glow-pink hover:scale-105 cursor-pointer transition-all";
+        }
+
+        function nextQuestion() {
+            currentQuizIndex++;
+            if (currentQuizIndex < quizQuestions.length) {
+                loadQuestion();
+            } else {
+                showQuizResult();
+            }
+        }
+
+        function showQuizResult() {
+            document.getElementById('quiz-screen').classList.add('hidden');
+            const resultScreen = document.getElementById('quiz-result');
+            resultScreen.classList.remove('hidden');
+            document.getElementById('quiz-score').textContent = `${quizScore} / ${quizQuestions.length}`;
+            
+            // Confetti launch for human nuance victory
+            confetti({
+                particleCount: 80,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+        }
+
+        function resetQuiz() {
+            currentQuizIndex = 0;
+            quizScore = 0;
+            document.getElementById('quiz-result').classList.add('hidden');
+            document.getElementById('quiz-screen').classList.remove('hidden');
+            loadQuestion();
+        }
+
+        // Initialize first quiz question
+        loadQuestion();
+
+
+        // -------------------------------------------------------------
+        // Pledge & Counter Interactive Module
+        // -------------------------------------------------------------
+        let currentPledgeCount = 14289;
+        let hasPledged = false;
+
+        function takePledge() {
+            if (hasPledged) return;
+
+            hasPledged = true;
+            currentPledgeCount++;
+            
+            // Animate number display
+            const countEl = document.getElementById('pledge-count');
+            countEl.textContent = currentPledgeCount.toLocaleString();
+
+            const btnText = document.getElementById('pledge-btn-text');
+            btnText.textContent = "You Have Stood For Human Intelligence!";
+
+            const btn = document.getElementById('pledge-btn');
+            btn.classList.remove('from-cyber-pink', 'via-cyber-purple', 'to-cyber-cyan');
+            btn.classList.add('bg-emerald-500', 'hover:bg-emerald-600');
+
+            // Burst confetti celebration
+            confetti({
+                particleCount: 120,
+                spread: 100,
+                origin: { y: 0.7 },
+                colors: ['#ff2a85', '#00f0ff', '#ffb703', '#9d4edd']
+            });
+        }
+
+        // Handle Newsletter Subscription
+        function handleSubscribe(event) {
+            event.preventDefault();
+            const emailInput = document.getElementById('subscriber-email');
+            const status = document.getElementById('subscription-status');
+
+            if (emailInput.value) {
+                status.classList.remove('hidden');
+                status.className = "text-xs text-cyber-cyan font-mono animate-fadeIn";
+                status.textContent = "Welcome to the Movement! Email registered for domain updates.";
+                emailInput.value = '';
+
+                // Trigger pledge if not already done
+                if(!hasPledged) {
+                    takePledge();
+                }
+            }
+        }
+    </script>
+</body>
+</html>
